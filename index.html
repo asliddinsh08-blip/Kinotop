@@ -1,0 +1,39 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kino App</title>
+    <script src="https://telegram.org/js/telegram-web-app.js"></script>
+    <style>
+        body { background: #111; color: white; font-family: sans-serif; padding: 20px; margin: 0; }
+        h1 { text-align: center; }
+        input { width: 100%; padding: 15px; border: none; border-radius: 10px; margin-bottom: 20px; background: #222; color: white; box-sizing: border-box; }
+        .movie { background: #1e1e1e; padding: 15px; border-radius: 15px; margin-top: 10px; box-shadow: 0 4px 6px rgba(0,0,0,0.3); }
+        h3 { margin-top: 0; }
+        button { background: #e50914; color: white; border: none; padding: 10px 20px; border-radius: 5px; cursor: pointer; width: 100%; font-weight: bold; }
+    </style>
+</head>
+<body>
+    <h1>🎬 AI Kino App</h1>
+    <input type="text" placeholder="Kino qidirish...">
+    <div id="movie-list">
+        <div class="movie">
+            <h3>Fast & Furious 7</h3>
+            <p>🇺🇿 🇷🇺 🇺🇸</p>
+            <button>▶️ Ko'rish</button>
+        </div>
+        <div class="movie">
+            <h3>John Wick</h3>
+            <p>🇺🇿 🇷🇺 🇺🇸</p>
+            <button>▶️ Ko'rish</button>
+        </div>
+    </div>
+    <script>
+        const tg = window.Telegram.WebApp;
+        tg.expand();
+        tg.ready();
+    </script>
+</body>
+</html>
